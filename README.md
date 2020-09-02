@@ -1,5 +1,5 @@
 # Iquirer README Template App
-![app screenshot](./assets/readme-app.png)
+![AppDemo](./assets/gif.gif)
 
 ## Description 
 
@@ -45,11 +45,9 @@ Tutorial by - [CodingGarden](https://www.youtube.com/watch?v=QADNbsO6D_Y) was fo
 To contribute, or if you have any questions, reach out to me:
 vazqueztalia@outlook.com
 
-## Tests
-[See this app run here](https://github.com/taliavazquez/inquirer-readme-template/edit/master/README.md)
-
 ## Example
-[See this example created here](https://github.com/taliavazquez/inquirer-readme-template/edit/master/README.md)
+
+[See this example created here](https://youtu.be/dI3Bhnp4g3Q)
 ---
 © 2020 Talia Vazquez. All Rights Reserved.
 
