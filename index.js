@@ -7,50 +7,95 @@ const writeFileAsync = util.promisify(fs.writeFile);
 // array of questions for user
 function promptUser() {
     return inquirer.prompt([
+       
         {
             type: "input",
-            message: "Project Name:",
+            message: "Project Title?",
             name: "title"
         },
-       
+        {
+            type: "input",
+            message: `Description?`,
+            name: "description"
+        },
+        {
+            type: "input",
+            message: "Provide install instructions for this project.",
+            name: "installation"
+        },
+        {
+            type: "input",
+            message: "How will this be used?",
+            name: "usage"
+        },
+        {
+            type: "confirm",
+            message: "Test with ~npm test?",
+            name: "test"
+        },
+        {
+            type: "input",
+            message: "Who would you like to credit?",
+            name: "credit"
+        },
+        {
+            type: "checkbox",
+            message: "Please select a license.",
+            choices: [
+                "Apache",
+                "MIT",
+                "ISC",
+                "GNU GPLv3"
+            ],  
+            name: "license"
+        },
+        {
+            type: "input",
+            message: "Your email address:",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "Your GitHub username:",
+            name: "username"
+        },
+   
+        {
+            type: "emoji",
+            message: `How do you feel about this project?`,
+            name: "emoji"
+          },
     ]);
 }
 
 function generateMarkdown(response) {
     return `
 # ${response.title}
-# Table of Contents
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage) 
-- [Credits](#credits)
-- [License](#license) 
-- [Badges](#license) 
-- [Contributing](#contributing) 
-- [Tests](#tests)
-- [Example](#example)
 ## Description:
 ![License](https://img.shields.io/badge/License-${response.license}-yellow.svg)
     ${response.description}
+# Table of Contents
+- [Installation](#installation)
+- [Usage](#usage) 
+- [Test] (#test)
+- [Credits](#credits)
+- [License](#license) 
+- [Questions](#questions) 
+
 ## Installation:
     ${response.installation}
 ## Usage:
     ${response.usage}
-## Contributing:
-    ${response.contribution}
-## Test:
+## Test
+Can you test this with npm test?
     ${response.test}
 ## Credits:
     ${response.credit}
 ## License:
-    For more information about the License, click on the link below.
-    
 - [License](https://opensource.org/licenses/${response.license})
 ## Questions:
-    For questions about the Generator you can go to my 
-    GitHub page at the following Link: 
+Feel free to reach out to me with any questions, contact me via email. ${response.email}
 - [GitHub Profile](https://github.com/${response.username})
-For additional questions please reach out to my email at: ${response.email}
 `;
 }
 
@@ -58,11 +103,9 @@ For additional questions please reach out to my email at: ${response.email}
 async function init() {
     try {
         const response = await promptUser();
-
         const readMe = generateMarkdown(response);
-
         await writeFileAsync("README.md", readMe);
-        console.log("Success!");
+        console.log("Your README.md is complete, and is in this directory, press <ls> to see it");
     } catch (err) {
         console.log(err);
     }
