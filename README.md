@@ -46,8 +46,8 @@ To contribute, or if you have any questions, reach out to me:
 vazqueztalia@outlook.com
 
 ## Example
-
-[See this example created here](https://youtu.be/dI3Bhnp4g3Q)
+[Video here](https://youtu.be/dI3Bhnp4g3Q)
+[README.md Generated with app, here] (https://github.com/taliavazquez/inquirer-readme-template/blob/master/assets/README.md)
 ---
 © 2020 Talia Vazquez. All Rights Reserved.
 
