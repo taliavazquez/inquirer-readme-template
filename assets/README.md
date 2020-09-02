@@ -1,12 +1,11 @@
 
 # Talia's Readme template
 ## Description:
-![License](https://img.shields.io/badge/License--yellow.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
     This app will speed up the readme step
 # Table of Contents
 - [Installation](#installation)
 - [Usage](#usage) 
-- [Test] (#test)
 - [Credits](#credits)
 - [License](#license) 
 - [Questions](#questions) 
