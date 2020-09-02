@@ -3,7 +3,7 @@
 
 ## Description 
 
-This application will ask you questions, each question will be placed in the generated README.md created in the when you complete the questionaire. 
+This application will ask you questions, each question will be placed in the generated README.md created in the when you complete the questionnaire. 
 
 
 ## Table of Contents 
@@ -15,7 +15,7 @@ This application will ask you questions, each question will be placed in the gen
 
 
 ## Installation
-To use this app, you will need to clone this repo. Once this repo is cloned to a local directory. Be sure you have a local node_modules package stored in order to successfully run this app. To start the questionaire, open your command line and run ~ node index.js. Follow the questionaire until the end. Once you've completed the questions, you're completed README.md file should be in your current directory.
+To use this app, you will need to clone this repo. Once this repo is cloned to a local directory. Be sure you have a local node_modules package stored in order to successfully run this app. To start the questionnaire, open your command line and run ~ node index.js. Follow the questionnaire until the end. Once you've completed the questions, you're completed README.md file should be in your current directory.
 
 
 ## Usage 
